@@ -4,7 +4,12 @@
     "outDir": "../../../../out-tsc/lib",
     "declaration": true,
     "declarationMap": true,
-    "types": []
+    "types": [],
+    "paths": {
+      "@rakesh-portfolio/model": [
+        "../../../../dist/model/types/rakesh-portfolio-model.d.ts"
+      ]
+    }
   },
   "include": [
     "src/**/*.ts"

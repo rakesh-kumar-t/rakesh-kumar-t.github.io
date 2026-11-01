@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import type { DateRange } from '@rakesh-portfolio/model';
 
 const MONTHS: Record<string, number> = {
   Jan: 0,
@@ -14,11 +15,6 @@ const MONTHS: Record<string, number> = {
   Nov: 10,
   Dec: 11,
 };
-
-interface DateRange {
-  start: number;
-  end: number;
-}
 
 @Injectable({ providedIn: 'root' })
 export class PortfolioUtilService {

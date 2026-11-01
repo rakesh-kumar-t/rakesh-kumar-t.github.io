@@ -12,6 +12,9 @@ exports the public model API for imports such as:
 import type { SkillGroup } from '@rakesh-portfolio/model';
 ```
 
+Shared injectable utilities live in `src/libs/portfolio/utils` and are imported
+through `@rakesh-portfolio/utils`.
+
 ## Development
 
 Run `npm start` and open `http://localhost:4200/`.
@@ -27,6 +30,8 @@ ng generate component component-name
 Run `npm run build` to create an optimized production build in `dist/portfolio/`.
 Build the reusable models library with `npm run build:models`; its package is
 written to `dist/model/`.
+Build the utilities library with `npm run build:utils`; it builds the models
+library first and writes its package to `dist/utils/`.
 
 ## Tests
 
