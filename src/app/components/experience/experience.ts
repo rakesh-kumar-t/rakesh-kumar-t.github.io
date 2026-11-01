@@ -1,19 +1,13 @@
 import { Component } from '@angular/core';
-
-interface Role {
-  title: string;
-  company: string;
-  dates: string;
-  summary: string;
-}
+import type { ExperienceRole } from '@rakesh-portfolio/model';
 
 @Component({
   selector: 'app-experience',
   templateUrl: './experience.html',
-  styleUrl: './experience.css'
+  styleUrl: './experience.scss'
 })
 export class Experience {
-  readonly roles: Role[] = [
+  readonly roles: ExperienceRole[] = [
     {
       title: 'Engineer III, Software',
       company: 'Omnicell',

@@ -7,6 +7,6 @@ import { Skills } from './components/skills/skills';
   selector: 'app-root',
   imports: [Home, Skills, Experience],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.scss'
 })
 export class App {}

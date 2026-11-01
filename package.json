@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:models": "ng build model",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -22,6 +23,8 @@
     "@angular/cli": "^21.2.29",
     "@angular/compiler-cli": "^21.2.25",
     "jsdom": "^26.1.0",
+    "ng-packagr": "^21.2.0",
+    "sass": "^1.107.1",
     "typescript": "~5.9.3",
     "vitest": "^4.1.12"
   }

@@ -1,14 +1,10 @@
 import { Component } from '@angular/core';
-
-interface SkillGroup {
-  name: string;
-  skills: string[];
-}
+import type { SkillGroup } from '@rakesh-portfolio/model';
 
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.html',
-  styleUrl: './skills.css'
+  styleUrl: './skills.scss'
 })
 export class Skills {
   readonly groups: SkillGroup[] = [

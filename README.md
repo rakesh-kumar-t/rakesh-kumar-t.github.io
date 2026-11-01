@@ -4,7 +4,13 @@
 # Portfolio
 
 This portfolio uses Angular 21, standalone components, zoneless change detection,
-the application builder, and Vitest.
+the application builder, SCSS, and Vitest. Shared portfolio models live in
+the Angular library at `src/libs/portfolio/models`. Its `src/index.ts` barrel
+exports the public model API for imports such as:
+
+```ts
+import type { SkillGroup } from '@rakesh-portfolio/model';
+```
 
 ## Development
 
@@ -19,6 +25,8 @@ ng generate component component-name
 ## Build
 
 Run `npm run build` to create an optimized production build in `dist/portfolio/`.
+Build the reusable models library with `npm run build:models`; its package is
+written to `dist/model/`.
 
 ## Tests
 
