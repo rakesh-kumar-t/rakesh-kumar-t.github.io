@@ -20,6 +20,7 @@ describe('App', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h1')?.textContent).toContain('Rakesh Kumar T');
     expect(compiled.querySelector('#skills-title')?.textContent).toContain('Core skills');
+    expect(compiled.querySelectorAll('mat-chip').length).toBe(19);
     expect(compiled.querySelectorAll('.experience-item').length).toBe(3);
     expect(compiled.querySelector('.experience-item time')?.textContent)
       .toContain('Sep 2026 - Present');

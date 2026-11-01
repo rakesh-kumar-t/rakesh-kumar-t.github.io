@@ -6,14 +6,14 @@
 
   <div class="skills-grid">
     @for (group of groups; track group.name) {
-      <article class="skill-group">
-        <h3>{{ group.name }}</h3>
-        <ul class="skill-tags">
-          @for (skill of group.skills; track skill) {
-            <li>{{ skill }}</li>
-          }
-        </ul>
-      </article>
+    <article class="skill-group">
+      <h3>{{ group.name }}</h3>
+      <mat-chip-set [attr.aria-label]="group.name + ' skills'">
+        @for (skill of group.skills; track skill) {
+        <mat-chip>{{ skill }}</mat-chip>
+        }
+      </mat-chip-set>
+    </article>
     }
   </div>
 </section>
