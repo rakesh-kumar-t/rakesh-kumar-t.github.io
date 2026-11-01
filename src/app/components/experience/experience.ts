@@ -1,5 +1,6 @@
-import { Component, computed, signal } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import type { ExperienceRole } from '@rakesh-portfolio/model';
+import { PortfolioUtilService } from '@rakesh-portfolio/utils';
 
 @Component({
   selector: 'app-experience',
@@ -7,6 +8,7 @@ import type { ExperienceRole } from '@rakesh-portfolio/model';
   styleUrl: './experience.scss',
 })
 export class Experience {
+  private readonly portfolioUtil = inject(PortfolioUtilService);
   readonly showAllRoles = signal(false);
   readonly visibleRoles = computed(() =>
     this.showAllRoles() ? this.roles : this.roles.slice(0, 3),
@@ -49,4 +51,12 @@ export class Experience {
         'Contributed to ASP.NET enterprise solutions and developed a healthcare management application with Angular and .NET Core.',
     },
   ];
+
+  readonly totalExperience = this.portfolioUtil.calculateTotalDuration(
+    this.roles.map(role => role.dates),
+  );
+
+  getRoleDuration(dates: string): string {
+    return this.portfolioUtil.calculateDuration(dates);
+  }
 }

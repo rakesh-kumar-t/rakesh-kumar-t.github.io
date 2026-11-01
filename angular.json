@@ -107,6 +107,26 @@
           "defaultConfiguration": "production"
         }
       }
+    },
+    "utils": {
+      "projectType": "library",
+      "root": "src/libs/portfolio/utils",
+      "sourceRoot": "src/libs/portfolio/utils/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "src/libs/portfolio/utils/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "src/libs/portfolio/utils/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        }
+      }
     }
   }
 }

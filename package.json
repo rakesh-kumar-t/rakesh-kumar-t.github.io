@@ -1,11 +1,13 @@
 {
-  "name": "portfolio",
-  "version": "0.0.0",
+  "name": "rakesh-portfolio",
+  "version": "1.0.0",
+  "author": "rakesh-kumar-t",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "build:models": "ng build model",
+    "build:utils": "ng build utils",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

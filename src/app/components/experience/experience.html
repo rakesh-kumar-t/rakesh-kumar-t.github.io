@@ -1,7 +1,9 @@
 <section class="content-section" aria-labelledby="experience-title">
   <div class="section-heading">
     <p class="eyebrow">Where I have worked</p>
-    <h2 id="experience-title">Experience</h2>
+    <h2 id="experience-title">
+      Experience <span class="experience-total">({{ totalExperience }})</span>
+    </h2>
   </div>
 
   <ol class="experience-list" id="experience-list">
@@ -9,7 +11,10 @@
       <li class="experience-item">
         <div class="experience-heading">
           <div>
-            <h3>{{ role.title }}</h3>
+            <h3>
+              {{ role.title }}
+              <span class="role-duration">({{ getRoleDuration(role.dates) }})</span>
+            </h3>
             <p class="company">{{ role.company }}</p>
           </div>
           <time>{{ role.dates }}</time>

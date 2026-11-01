@@ -6,6 +6,7 @@
   --muted: #b1c9be;
   --accent: #a8e4ce;
   --line: rgba(62, 139, 114, 0.38);
+  --site-header-height: 88px;
 }
 
 * {
@@ -15,7 +16,7 @@
 html {
   min-width: 320px;
   scroll-behavior: smooth;
-  scroll-padding-top: 24px;
+  scroll-padding-top: calc(var(--site-header-height) + 16px);
 }
 
 body {
@@ -72,4 +73,10 @@ a:focus-visible {
 ::selection {
   background: #3e8b72;
   color: #ffffff;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --site-header-height: 74px;
+  }
 }

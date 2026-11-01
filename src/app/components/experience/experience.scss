@@ -3,6 +3,16 @@
   margin-top: 58px;
 }
 
+.experience-total,
+.role-duration {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.role-duration {
+  font-size: 0.85em;
+}
+
 .experience-list {
   display: grid;
   gap: 26px;

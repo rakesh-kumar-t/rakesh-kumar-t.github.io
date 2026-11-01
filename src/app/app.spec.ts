@@ -22,9 +22,13 @@ describe('App', () => {
     expect(compiled.querySelector('#skills-title')?.textContent).toContain('Core skills');
     expect(compiled.querySelectorAll('.experience-item').length).toBe(3);
     expect(compiled.querySelector('.experience-item time')?.textContent)
-      .toContain('Sep 2026 – Present');
+      .toContain('Sep 2026 - Present');
     expect(compiled.querySelectorAll('.experience-item time')[1].textContent)
-      .toContain('Sep 2024 – Sep 2026');
+      .toContain('Sep 2024 - Sep 2026');
+    expect(compiled.querySelector('#experience-title')?.textContent)
+      .toMatch(/Experience\s*\(\d+y(?: \d+m)?\)/);
+    expect(compiled.querySelectorAll('.experience-item h3')[1].textContent)
+      .toContain('(2y)');
     expect(compiled.textContent).not.toContain('@');
     expect(compiled.querySelector('a[href^="tel:"]')).toBeNull();
     expect(compiled.querySelector('.profile-photo')?.getAttribute('src'))
@@ -47,6 +51,10 @@ describe('App', () => {
     expect(compiled.querySelectorAll('.experience-item').length).toBe(5);
     expect(compiled.textContent).toContain('PricewaterhouseCoopers (PwC)');
     expect(compiled.textContent).toContain('DXC Technology');
+    expect(compiled.querySelectorAll('.experience-item h3')[3].textContent)
+      .toContain('(3m)');
+    expect(compiled.querySelectorAll('.experience-item h3')[4].textContent)
+      .toContain('(1y 1m)');
     expect(compiled.querySelector('.experience-toggle')?.textContent).toContain('View less');
 
     (compiled.querySelector('.experience-toggle') as HTMLButtonElement).click();
