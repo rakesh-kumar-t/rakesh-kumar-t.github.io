@@ -1,0 +1,31 @@
+<section class="content-section" aria-labelledby="experience-title">
+  <div class="section-heading">
+    <p class="eyebrow">Where I have worked</p>
+    <h2 id="experience-title">Experience</h2>
+  </div>
+
+  <ol class="experience-list">
+    <li class="experience-item" *ngFor="let role of roles">
+      <div class="experience-heading">
+        <div>
+          <h3>{{ role.title }}</h3>
+          <p class="company">{{ role.company }}</p>
+        </div>
+        <time>{{ role.dates }}</time>
+      </div>
+      <p class="experience-summary">{{ role.summary }}</p>
+    </li>
+  </ol>
+
+  <div class="education">
+    <div class="section-heading">
+      <p class="eyebrow">A little more</p>
+      <h2>Education & certification</h2>
+    </div>
+    <div class="education-details">
+      <p><strong>B.Tech, Instrumentation and Control Engineering</strong></p>
+      <p>APJ Abdul Kalam Technological University</p>
+      <p class="certification">Microsoft Certified: Azure Fundamentals</p>
+    </div>
+  </div>
+</section>

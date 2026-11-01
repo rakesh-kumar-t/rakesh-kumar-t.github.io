@@ -1,0 +1,15 @@
+<section class="content-section" aria-labelledby="skills-title">
+  <div class="section-heading">
+    <p class="eyebrow">What I work with</p>
+    <h2 id="skills-title">Core skills</h2>
+  </div>
+
+  <div class="skills-grid">
+    <article class="skill-group" *ngFor="let group of groups">
+      <h3>{{ group.name }}</h3>
+      <ul class="skill-tags">
+        <li *ngFor="let skill of group.skills">{{ skill }}</li>
+      </ul>
+    </article>
+  </div>
+</section>

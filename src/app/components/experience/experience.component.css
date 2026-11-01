@@ -1,0 +1,107 @@
+:host {
+  display: block;
+  margin-top: 58px;
+}
+
+.experience-list {
+  display: grid;
+  gap: 26px;
+  margin: 0;
+  padding: 0 0 0 19px;
+  border-left: 1px solid var(--line);
+  list-style: none;
+}
+
+.experience-item {
+  position: relative;
+}
+
+.experience-item::before {
+  position: absolute;
+  top: 5px;
+  left: -24px;
+  width: 9px;
+  height: 9px;
+  border: 2px solid var(--background);
+  border-radius: 50%;
+  background: var(--accent);
+  content: "";
+}
+
+.experience-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.experience-heading h3 {
+  margin: 0;
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 650;
+}
+
+.experience-heading time {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.company {
+  margin: 4px 0 0;
+  color: #e0f1e9;
+  font-size: 13px;
+  font-weight: 550;
+}
+
+.experience-summary {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.education {
+  margin-top: 52px;
+}
+
+.education-details {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.education-details p {
+  margin: 0;
+}
+
+.education-details strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.education-details .certification {
+  margin-top: 11px;
+  color: var(--accent);
+}
+
+@media (max-width: 640px) {
+  :host {
+    margin-top: 44px;
+  }
+
+  .experience-heading {
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .experience-heading h3 {
+    font-size: 14px;
+  }
+
+  .experience-heading time {
+    font-size: 11px;
+    text-align: right;
+  }
+}

@@ -1,0 +1,115 @@
+:host {
+  display: block;
+}
+
+.portfolio-shell {
+  width: min(1440px, 100%);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 56px;
+}
+
+.site-header {
+  min-height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand,
+.header-links {
+  display: flex;
+  align-items: center;
+}
+
+.brand {
+  gap: 12px;
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+.brand-mark {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border: 1px solid rgba(168, 228, 206, 0.38);
+  border-radius: 11px;
+  background: rgba(40, 86, 71, 0.45);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 0;
+}
+
+.header-links {
+  gap: 28px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.header-links a:hover {
+  color: var(--accent);
+}
+
+.portfolio-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.78fr) minmax(0, 1.5fr);
+  min-height: calc(100vh - 89px);
+}
+
+.content-panel {
+  min-width: 0;
+  padding: 58px 0 76px 64px;
+}
+
+@media (max-width: 850px) {
+  .portfolio-shell {
+    padding: 0 30px;
+  }
+
+  .portfolio-layout {
+    grid-template-columns: minmax(230px, 0.8fr) minmax(0, 1.2fr);
+  }
+
+  .content-panel {
+    padding-left: 34px;
+  }
+}
+
+@media (max-width: 640px) {
+  .portfolio-shell {
+    padding: 0 20px;
+  }
+
+  .site-header {
+    min-height: 74px;
+  }
+
+  .brand {
+    gap: 9px;
+    font-size: 13px;
+  }
+
+  .brand-mark {
+    width: 32px;
+    height: 32px;
+  }
+
+  .header-links {
+    gap: 12px;
+    font-size: 11px;
+  }
+
+  .portfolio-layout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content-panel {
+    padding: 38px 0 54px;
+  }
+}
