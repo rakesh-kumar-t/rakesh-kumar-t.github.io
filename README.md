@@ -1,3 +1,6 @@
+[![pages-build-deployment](https://github.com/rakesh-kumar-t/rakesh-kumar-t.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/rakesh-kumar-t/rakesh-kumar-t.github.io/actions/workflows/pages/pages-build-deployment)
+[![Build and deploy GitHub Pages](https://github.com/rakesh-kumar-t/rakesh-kumar-t.github.io/actions/workflows/node.js.yml/badge.svg)](https://github.com/rakesh-kumar-t/rakesh-kumar-t.github.io/actions/workflows/node.js.yml)
+
 # Portfolio
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.4.
