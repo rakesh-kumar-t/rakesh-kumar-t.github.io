@@ -5,16 +5,18 @@
   </div>
 
   <ol class="experience-list">
-    <li class="experience-item" *ngFor="let role of roles">
-      <div class="experience-heading">
-        <div>
-          <h3>{{ role.title }}</h3>
-          <p class="company">{{ role.company }}</p>
+    @for (role of roles; track role.title) {
+      <li class="experience-item">
+        <div class="experience-heading">
+          <div>
+            <h3>{{ role.title }}</h3>
+            <p class="company">{{ role.company }}</p>
+          </div>
+          <time>{{ role.dates }}</time>
         </div>
-        <time>{{ role.dates }}</time>
-      </div>
-      <p class="experience-summary">{{ role.summary }}</p>
-    </li>
+        <p class="experience-summary">{{ role.summary }}</p>
+      </li>
+    }
   </ol>
 
   <div class="education">

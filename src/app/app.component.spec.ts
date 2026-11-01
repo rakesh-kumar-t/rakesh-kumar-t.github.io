@@ -1,20 +1,10 @@
 import { TestBed } from '@angular/core/testing';
-import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
-import { ExperienceComponent } from './components/experience/experience.component';
-import { HomeComponent } from './components/home/home.component';
-import { SkillsComponent } from './components/skills/skills.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CommonModule],
-      declarations: [
-        AppComponent,
-        HomeComponent,
-        SkillsComponent,
-        ExperienceComponent
-      ],
+      imports: [AppComponent],
     }).compileComponents();
   });
 

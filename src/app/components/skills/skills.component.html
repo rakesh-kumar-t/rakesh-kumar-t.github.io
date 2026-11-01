@@ -5,11 +5,15 @@
   </div>
 
   <div class="skills-grid">
-    <article class="skill-group" *ngFor="let group of groups">
-      <h3>{{ group.name }}</h3>
-      <ul class="skill-tags">
-        <li *ngFor="let skill of group.skills">{{ skill }}</li>
-      </ul>
-    </article>
+    @for (group of groups; track group.name) {
+      <article class="skill-group">
+        <h3>{{ group.name }}</h3>
+        <ul class="skill-tags">
+          @for (skill of group.skills; track skill) {
+            <li>{{ skill }}</li>
+          }
+        </ul>
+      </article>
+    }
   </div>
 </section>
