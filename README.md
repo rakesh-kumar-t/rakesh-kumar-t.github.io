@@ -3,7 +3,7 @@
 
 # Portfolio
 
-This portfolio uses Angular 21, standalone components, zoneless change detection,
+This portfolio uses Angular 22, standalone components, zoneless change detection,
 the application builder, SCSS, and Vitest. Shared portfolio models live in
 the Angular library at `src/libs/portfolio/models`. Its `src/index.ts` barrel
 exports the public model API for imports such as:

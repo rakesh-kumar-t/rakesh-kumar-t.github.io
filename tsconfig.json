@@ -15,10 +15,9 @@
     "declaration": false,
     "experimentalDecorators": true,
     "moduleResolution": "bundler",
-    "baseUrl": ".",
     "paths": {
       "@rakesh-portfolio/model": [
-        "src/libs/portfolio/models/src/index.ts"
+        "./src/libs/portfolio/models/src/index.ts"
       ]
     },
     "importHelpers": true,
