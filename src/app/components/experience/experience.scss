@@ -62,6 +62,43 @@
   line-height: 1.7;
 }
 
+.experience-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 18px 0 0 19px;
+  padding: 4px 0;
+  border: 0;
+  background: transparent;
+  color: var(--accent);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.experience-toggle:hover {
+  color: var(--text);
+}
+
+.experience-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.toggle-icon {
+  width: 7px;
+  height: 7px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 150ms ease;
+}
+
+.experience-toggle[aria-expanded="true"] .toggle-icon {
+  transform: rotate(225deg);
+}
+
 .education {
   margin-top: 52px;
 }

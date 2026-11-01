@@ -30,4 +30,29 @@ describe('App', () => {
     expect(compiled.querySelector('.profile-photo')?.getAttribute('src'))
       .toBe('assets/images/img_bg_4.jpg');
   });
+
+  it('should show earlier experience roles and collapse back to the latest three', () => {
+    const fixture = TestBed.createComponent(App);
+    fixture.detectChanges();
+
+    const compiled = fixture.nativeElement as HTMLElement;
+    const viewMore = compiled.querySelector('.experience-toggle') as HTMLButtonElement;
+
+    expect(compiled.querySelectorAll('.experience-item').length).toBe(3);
+    expect(viewMore.textContent).toContain('View more');
+
+    viewMore.click();
+    fixture.detectChanges();
+
+    expect(compiled.querySelectorAll('.experience-item').length).toBe(5);
+    expect(compiled.textContent).toContain('PricewaterhouseCoopers (PwC)');
+    expect(compiled.textContent).toContain('DXC Technology');
+    expect(compiled.querySelector('.experience-toggle')?.textContent).toContain('View less');
+
+    (compiled.querySelector('.experience-toggle') as HTMLButtonElement).click();
+    fixture.detectChanges();
+
+    expect(compiled.querySelectorAll('.experience-item').length).toBe(3);
+    expect(compiled.textContent).not.toContain('PricewaterhouseCoopers (PwC)');
+  });
 });

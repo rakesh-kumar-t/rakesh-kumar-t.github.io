@@ -4,8 +4,8 @@
     <h2 id="experience-title">Experience</h2>
   </div>
 
-  <ol class="experience-list">
-    @for (role of roles; track role.title) {
+  <ol class="experience-list" id="experience-list">
+    @for (role of visibleRoles(); track role.title) {
       <li class="experience-item">
         <div class="experience-heading">
           <div>
@@ -18,6 +18,17 @@
       </li>
     }
   </ol>
+
+  <button
+    class="experience-toggle"
+    type="button"
+    aria-controls="experience-list"
+    [attr.aria-expanded]="showAllRoles()"
+    (click)="showAllRoles.update(expanded => !expanded)"
+  >
+    {{ showAllRoles() ? 'View less' : 'View more' }}
+    <span class="toggle-icon" aria-hidden="true"></span>
+  </button>
 
   <div class="education">
     <div class="section-heading">
