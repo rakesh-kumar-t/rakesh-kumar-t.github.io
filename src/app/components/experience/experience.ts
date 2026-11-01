@@ -9,10 +9,10 @@ interface Role {
 
 @Component({
   selector: 'app-experience',
-  templateUrl: './experience.component.html',
-  styleUrls: ['./experience.component.css']
+  templateUrl: './experience.html',
+  styleUrl: './experience.css'
 })
-export class ExperienceComponent {
+export class Experience {
   readonly roles: Role[] = [
     {
       title: 'Engineer III, Software',

@@ -7,10 +7,10 @@ interface SkillGroup {
 
 @Component({
   selector: 'app-skills',
-  templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.css']
+  templateUrl: './skills.html',
+  styleUrl: './skills.css'
 })
-export class SkillsComponent {
+export class Skills {
   readonly groups: SkillGroup[] = [
     {
       name: 'Frontend',
